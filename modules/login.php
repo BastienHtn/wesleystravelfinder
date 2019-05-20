@@ -1,31 +1,12 @@
 <?php
 
-if(session_status() == PHP_SESSION_NONE)
-{
-    session_start();
-}
-
 if(isset($_POST['connect']))	// Si on a cliqué sur le bouton 'Se connecter'
 {
-    if(isset($_POST['nickname']) && $_POST['nickname'] != '')	// Si pseudo n'est pas vide
-    {
-        if(isset($_POST['password']) && $_POST['password'] != '')
-        {
-            // Récupération des valeurs entrées
-            $_SESSION['nickname'] = $_POST['nickname'];
-			
-			// Message confirmant la connexion
-            echo '<div class="success_message">Bienvenue '.$_SESSION['nickname'].', vous êtes connecté</div>';
-        }
-        else
-        {
-            echo '<div class="error_message">Merci de renseigner le mot de passe</div>';
-        }
-    }
-    else
-    {
-        echo '<div class="error_message">Merci de renseigner le pseudo</div>';
-    }
+	// Récupération des valeurs entrées
+	$_SESSION['nickname'] = $_POST['nickname'];
+	
+	// Message confirmant la connexion
+	echo '<div class="success_message">Bienvenue '.$_SESSION['nickname'].', vous êtes connecté</div>';
 }
 
 if(isset($_POST['disconnect']))	// Si on a cliqué sur le bouton 'Se déconnecter'
@@ -41,7 +22,7 @@ if(isset($_POST['disconnect']))	// Si on a cliqué sur le bouton 'Se déconnecte
 	{
 ?>
 	<div class="form_disconnection">
-		<form name='form_disconnection' action='#' method='post'>
+		<form name='form_disconnection' action='' method='post'>
 		<h2>Informations compte</h2>
 		<table align='center'>
 			<tr>
@@ -66,7 +47,7 @@ if(isset($_POST['disconnect']))	// Si on a cliqué sur le bouton 'Se déconnecte
 	{
 ?>
 	<div class="form_connection">
-		<form name='form_connection' action='#' method='post'>
+		<form name='form_connection' action='' method='post'>
 		<table align='center'>
 			<tr>
 				<td>
@@ -75,7 +56,7 @@ if(isset($_POST['disconnect']))	// Si on a cliqué sur le bouton 'Se déconnecte
 			</tr>
 			<tr>
 				<td>
-					<input class='form-control' type='text' name='nickname'/>
+					<input class='form-control' type='text' name='nickname' required/>
 				</td>
 			</tr>
 			<tr>
