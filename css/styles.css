@@ -22,9 +22,8 @@ body {
     text-align: right;
 }
 
-.navbar-block-lien button {
+.navbar-block-lien a {
     letter-spacing: 1px;
     margin-left: 20px;
-    background-color: none;
-    border: none;
+    color: black;
 }

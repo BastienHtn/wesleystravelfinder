@@ -4,8 +4,8 @@
             <img src="img/wtfLogo.png">
         </div> -->
         <div class="navbar-block-lien">
-            <button>Réservation</button>
-            <button>Connexion</button>
+            <a href="index.php?page=resa">Réservation</a>
+            <a href="index.php?page=connexion">Connexion</a>
         </div>
     </div>
 </div>
