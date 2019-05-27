@@ -97,3 +97,19 @@ body {
     25%{opacity: 0;}
     100% {opacity: 1;}
 }
+
+#plane{
+    z-index: 1;
+    margin-left: -25vw;
+    height: 5vw;
+    width: 5vw;
+}
+
+@keyframes envol{
+    from{
+        margin-left: -25vw; height: 5vw; width: 5vw;
+    }
+    to{
+        margin-left: 100vw; height: 50vw; width: 50vw;
+    }
+}
