@@ -16,8 +16,9 @@ if(session_status() == PHP_SESSION_NONE)
             <img id="logoWtf" src="img/wtfLogo.png">
         </div>
         <div id="infos" class="display-4">
-            Un outil de gestion de voyages, que vous soyez seul ou accompagné...</br></br>
-            <button type="button" class="btn btn-secondary" style="font-size: x-large;">Créer mon Voyage</button>
+            <div style="font-size: xx-large;">Un outil de gestion de voyages, que vous soyez seul ou accompagné...</div>
+            </br></br>
+            <button type="button" class="btn btn-secondary rounded-pill" style="font-size: large;">Créer mon Voyage</button>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
