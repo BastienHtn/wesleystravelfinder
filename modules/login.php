@@ -21,7 +21,7 @@ if(isset($_POST['disconnect']))	// Si on a cliqué sur le bouton 'Se déconnecte
 	if(isset($_SESSION['nickname']))
 	{
 ?>
-	<div class="form_disconnection">
+	<div class="form_login">
 		<form name='form_disconnection' action='' method='post'>
 		<h2>Informations compte</h2>
 		<table align='center'>
@@ -46,7 +46,7 @@ if(isset($_POST['disconnect']))	// Si on a cliqué sur le bouton 'Se déconnecte
 	else	// Si la session n'est pas admin, on affiche le formulaire de connexion
 	{
 ?>
-	<div class="form_connection">
+	<div class="form_login">
 		<form name='form_connection' action='' method='post'>
 		<table align='center'>
 			<tr>
