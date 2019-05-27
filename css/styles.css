@@ -4,11 +4,12 @@ body {
 }
 
 .navbar {
-    background-color: #949494;
+    background-color: #e9ecef;
     width: 100%;
-    height: 55px;
-    border-bottom: 2px solid black;
+    height: 60px;
     padding: 0px;
+    filter: drop-shadow(3px 3px 3px black);
+    margin-bottom: 100px;
 }
 
 .navbar-block {
@@ -17,17 +18,15 @@ body {
     display: inline-flex;
     margin: auto;
     padding: 0px;
-}
-
-.navbar-block-lien {
     width: 100%;
-    text-align: right;
+    text-align: center;
 }
 
-.navbar-block-lien a {
+.navbar-block a {
     letter-spacing: 1px;
-    margin-left: 20px;
     color: black;
+    line-height: 45px;
+    font-size: large;
 }
 
 .navbar-block-logo {
@@ -36,7 +35,6 @@ body {
     border-radius: 70px;
     margin: auto;
     background-color: #949494;
-    border: 2px solid black;
     position: absolute;
     top: -30px;
 }
@@ -47,8 +45,14 @@ body {
 }
 
 .form_login {
-    position:absolute;
-    top:40%;
-    right:0;
-    left:0;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 0;
+}
+
+.navbar-block img {
+    width: 50px;
+    height: 50px;
+    margin: 0px 35px;
 }
