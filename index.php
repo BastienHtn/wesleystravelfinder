@@ -9,45 +9,6 @@ if(session_status() == PHP_SESSION_NONE)
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/styles.css">
-        <style>
-            body {
-                background-image: url("img/chureiTower.jpg");
-                background-size: cover;
-            }
-
-            #logoWtf{
-                max-height: 17vw;
-                width: auto;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 3vw;
-                display: block;
-            }
-
-            #logoIntro{
-                animation-name: intro;
-                animation-duration: 3s;
-            }
-
-            @keyframes intro{
-                from {opacity: 0; margin-left: -100%; margin-right: 100%;}
-                to {opacity: 1;}
-            }
-
-            #infos{
-                text-align: center;
-                color: white;
-                font-size: 2vw;
-                animation-name: introText;
-                animation-duration: 3s;
-                animation-delay: 1s;
-            }
-
-            @keyframes introText{
-                from {opacity: 0;}
-                to {opacity: 1;}
-            }
-        </style>
     </head>
 
     <body>
