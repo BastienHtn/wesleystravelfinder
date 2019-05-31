@@ -6,12 +6,16 @@ body {
 
 .progress {
     position: absolute;
-    bottom: 70px;
+    bottom: 45px;
     width: 80%;
     right: 10%;
     height: 1rem;
     background-color: white;
     justify-items: center;
+}
+
+#pbar {
+    background-color: purple;
 }
 
 .resa-titre {
@@ -126,25 +130,38 @@ body {
     animation-duration: 4s;
 }
 
-@keyframes introText{
-    0% {opacity: 0;}
-    25%{opacity: 0;}
-    100% {opacity: 1;}
+@keyframes introText {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-#plane{
+#plane {
     z-index: 1;
     margin-left: -25vw;
     height: 5vw;
     width: 5vw;
 }
 
-@keyframes envol{
-    from{
-        margin-left: -25vw; height: 5vw; width: 5vw;
+@keyframes envol {
+    from {
+        margin-left: -25vw;
+        height: 5vw;
+        width: 5vw;
     }
-    to{
-        margin-left: 100vw; height: 50vw; width: 50vw;
+
+    to {
+        margin-left: 100vw;
+        height: 50vw;
+        width: 50vw;
     }
 }
 
@@ -176,4 +193,9 @@ section.active {
     transition: all 1s ease;
 }
 
-.resa-etape-contenu {}
+.resa-etape-contenu {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    justify-items: center;
+}
