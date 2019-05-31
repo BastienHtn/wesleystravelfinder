@@ -235,7 +235,7 @@ body {
 
 .resa-etape {
     width: 100%;
-    height: 100%;
+    height: 60%;
     text-align: center;
     display: inline-block;
 }
@@ -268,7 +268,7 @@ section.active {
 
 .etape1-choix {
     display: inline-block;
-    padding: 4%;
+    padding: 5%;
     border-radius: 5%;
     width: 30vh;
     height: 30vh;
@@ -283,7 +283,7 @@ section.active {
 
 .etape1-choix-clicked {
     display: inline-block;
-    padding: 4%;
+    padding: 5%;
     width: 30vh;
     height: 30vh;
     background-color: rgba(118, 0, 173, 1);
@@ -310,7 +310,7 @@ section.active {
 }
 
 .etape1-block {
-    margin-top: 8%;
+    margin-top: 15%;
     width: 100%;
     height: 100%;
 }
