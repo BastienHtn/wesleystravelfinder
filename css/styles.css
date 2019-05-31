@@ -316,3 +316,9 @@ section.active {
 .etape2-block-interet img {
     margin: 0px 34px;
 }
+
+.icon-validate {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+}

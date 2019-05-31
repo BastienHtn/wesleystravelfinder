@@ -34,22 +34,34 @@
                 <div class="etape2-block">
                     <h2>Sélectionnez vos centres d'intérêts</h2>
                     <div class="etape2-block-interet">
-                        <img src="https://img.icons8.com/color/100/000000/food-and-wine.png">
+                        <div style="position: relative;">
+                            <img src="https://img.icons8.com/color/100/000000/food-and-wine.png">
+                            <img class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                        </div>
                         <br>
                         <span>Gastronomie</span>
                     </div>
                     <div class="etape2-block-interet">
-                        <img src="https://img.icons8.com/color/100/000000/alps.png">
+                        <div style="position: relative;">
+                            <img src="https://img.icons8.com/color/100/000000/alps.png">
+                            <img class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                        </div>
                         <br>
                         <span>Paysage</span>
                     </div>
                     <div class="etape2-block-interet">
-                        <img src="https://img.icons8.com/color/100/000000/museum.png">
+                        <div style="position: relative;">
+                            <img src="https://img.icons8.com/color/100/000000/museum.png">
+                            <img class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                        </div>
                         <br>
                         <span>Culture</span>
                     </div>
                     <div class="etape2-block-interet">
-                        <img src="https://img.icons8.com/color/100/000000/football2.png">
+                        <div style="position: relative;">
+                            <img src="https://img.icons8.com/color/100/000000/football2.png">
+                            <img class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                        </div>
                         <br>
                         <span>Sport</span>
                     </div>
