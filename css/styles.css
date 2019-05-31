@@ -4,13 +4,47 @@ body {
     background-size: cover;
 }
 
+.progress {
+    position: absolute;
+    bottom: 70px;
+    width: 80%;
+    right: 10%;
+    height: 1rem;
+    background-color: white;
+    justify-items: center;
+}
+
+.resa-titre {
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.icon-fleche {
+    position: absolute;
+    color: white;
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+    top: 50%;
+    margin: 0px 15px;
+}
+
+.icon-fleche#fdroite {
+    right: 0px;
+}
+
+.icon-fleche#fgauche {
+    left: 0px;
+    display: none;
+}
+
 .navbar {
     background-color: #e9ecef;
     width: 100%;
     height: 60px;
     padding: 0px;
     filter: drop-shadow(3px 3px 3px black);
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .navbar-block {
@@ -113,3 +147,33 @@ body {
         margin-left: 100vw; height: 50vw; width: 50vw;
     }
 }
+
+.resa-etape {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+section h1 {
+    margin-bottom: 220px;
+}
+
+section span {
+    color: white;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+.anim-etape {
+    display: none;
+    transform: translate(100%, 0);
+    transition: all 1s ease;
+}
+
+.resa-etape-contenu {}

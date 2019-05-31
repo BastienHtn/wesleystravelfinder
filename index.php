@@ -20,7 +20,7 @@ if(session_status() == PHP_SESSION_NONE)
         <div id="infos" class="display-4">
             <div style="font-size: xx-large;">Un outil de gestion de voyages, que vous soyez seul ou accompagné...</div>
             </br></br>
-            <button id="btEnvol" type="button" class="btn btn-secondary rounded-pill" style="font-size: large;">Créer mon Voyage</button>
+            <a href="modules/accueil.php?page=connexion"><button id="btEnvol" type="button" class="btn btn-secondary rounded-pill" style="font-size: large;">Créer mon Voyage</button></a>
         </div>
         
         <img id="plane" class="plane" src="img/planeLogo.png">
