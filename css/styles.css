@@ -1,7 +1,13 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     margin: none;
     background-image: url("../img/chureiTower.jpg");
     background-size: cover;
+    height: 100%;
 }
 
 .progress {
@@ -229,6 +235,7 @@ body {
 
 .resa-etape {
     width: 100%;
+    height: 100%;
     text-align: center;
     display: inline-block;
 }
@@ -244,6 +251,8 @@ section {
 
 section.active {
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .anim-etape {
@@ -252,47 +261,58 @@ section.active {
     transition: all 1s ease;
 }
 
-/* .resa-etape-contenu {
-    position: absolute;
-    width: 80%;
-    top: 43%;
-    right: 10%;
-    justify-items: center;
-} */
+.resa-etape-contenu {
+    width: 100%;
+    height: 100%;
+}
 
 .etape1-choix {
     display: inline-block;
-    margin: 5%;
-    width: 15%;
-    height: 15%;
+    padding: 4%;
     border-radius: 5%;
+    width: 30vh;
+    height: 30vh;
 }
 
 .etape1-choix:hover {
     background-color: rgba(118, 0, 173, 0.7);
-    border-radius: 0px;
+    border-radius: 5%;
     filter: drop-shadow(3px 3px 3px black);
     cursor: pointer;
 }
 
 .etape1-choix-clicked {
     display: inline-block;
-    margin: 5%;
-    width: 15%;
-    height: 15%;
+    padding: 4%;
+    width: 30vh;
+    height: 30vh;
     background-color: rgba(118, 0, 173, 1);
-    border-radius: 0px;
+    border-radius: 5%;
     filter: drop-shadow(3px 3px 3px black);
     cursor: pointer;
+}
+
+.etape1-choix img {
+    filter: drop-shadow(1px 1px 1px black);
 }
 
 .etape1-label {
     color: white;
     font-size: xx-large;
+    text-shadow: 2px 2px black;
+}
+
+.etape1-label-large {
+    color: white;
+    font-size: 300%;
+    text-shadow: 2px 2px black;
+    margin: 5%;
 }
 
 .etape1-block {
-    margin-top: 70px;
+    margin-top: 8%;
+    width: 100%;
+    height: 100%;
 }
 
 .etape2-block {

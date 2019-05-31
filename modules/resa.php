@@ -20,6 +20,7 @@
                         <br>
                         <span class="etape1-label">En groupe</span>
                     </div>
+                    <span class="etape1-label-large">OU</span>
                     <div id="etape1-choix-solo" class="etape1-choix" onclick="etape1_choose('etape1-choix-solo')">
                         <img src="../img/seul-100.png"/>
                         <br>
