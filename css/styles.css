@@ -83,12 +83,74 @@ body {
     height: 160px;
 }
 
-.form_login {
+.form-login-connection {
     position: absolute;
-    top: 40%;
-    right: 0;
-    left: 0;
+    top: 30%;
+    right: 20%;
+    left: 20%;
+    text-align: center;
 }
+
+.connection {
+    text-align: center;
+    position: absolute;
+    right: 35%;
+    left: 35%;
+}
+
+.connection input {
+    margin: 2%;
+}
+
+.connection input[type="submit"] {
+    margin: 10%;
+}
+
+.form-login-disconnection {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    left: 20%;
+    text-align: center;
+}
+
+.form-login h1 {
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.label-login {
+    font-size: xx-large;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.compte {
+    margin: 5%;
+    text-align: center;
+}
+
+.compte input {
+    margin: 10%;
+}
+
+.success_message{
+    margin: 5%;
+    padding: 1%;
+    background-color: green;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
 .navbar-block img {
     width: 50px;

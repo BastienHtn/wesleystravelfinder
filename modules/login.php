@@ -1,82 +1,48 @@
 <?php
-
-if(isset($_POST['connect']))	// Si on a cliqué sur le bouton 'Se connecter'
+/*
+				/!\ IMPORTANT /!\
+	La gestion du formulaire de connexion/déconnexion
+	est gérée dans manage_session.php
+*/
+	
+// Si la session est admin, on affiche les informations du compte
+if(isset($_SESSION['nickname']))
 {
-	// Récupération des valeurs entrées
-	$_SESSION['nickname'] = $_POST['nickname'];
-	
-	// Message confirmant la connexion
-	echo '<div class="success_message">Bienvenue '.$_SESSION['nickname'].', vous êtes connecté</div>';
-}
-
-if(isset($_POST['disconnect']))	// Si on a cliqué sur le bouton 'Se déconnecter'
-	{
-		// Suppression des variables de session et de la session
-		$_SESSION = array();
-		session_destroy();
-		echo '<div class="success_message">Vous vous êtes déconnecté</div>';
-	}
-	
-	// Si la session est admin, on affiche les informations du compte
-	if(isset($_SESSION['nickname']))
-	{
 ?>
-	<div class="form_login">
+<div class="form-login">
+	<div class="form-login-disconnection">
 		<form name='form_disconnection' action='' method='post'>
-		<h2>Informations compte</h2>
-		<table align='center'>
-			<tr>
-				<td>
-					Pseudo :
-				</td>
-				<td>
-					<?php echo $_SESSION['nickname']; ?>
-				</td>
-			</tr>
-			<tr>
-				<td colspan='2'>
-					<input class='btn btn-danger' type='submit' name='disconnect' value='Se déconnecter'/>
-				</td>
-			</tr>
-		</table>
+			<h1>Informations compte</h1>
+			<br>
+			<div class="compte">
+				<span class="label-login">Pseudo :</span>
+				<span class="label-login">&nbsp;<?php echo $_SESSION['nickname']; ?></span>
+				<br>
+				<input class='btn btn-danger' type='submit' name='disconnect' value='Se déconnecter'/>
+			</div>
 		</form>
 	</div>
+</div>
 <?php
-	}
-	else	// Si la session n'est pas admin, on affiche le formulaire de connexion
-	{
+}
+else	// Si la session n'est pas admin, on affiche le formulaire de connexion
+{
 ?>
-	<div class="form_login">
+<div class="form-login">
+	<div class="form-login-connection">
 		<form name='form_connection' action='' method='post'>
-		<table align='center'>
-			<tr>
-				<td>
-					Pseudo :
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input class='form-control' type='text' name='nickname' required/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Mot de passe :
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input class='form-control' type='password' name='password'/>
-				</td>
-			</tr>
-			<tr>
-				<td class='connect_button'>
-					<input class='btn btn-success' type='submit' name='connect' value='Se connecter'/>
-				</td>
-			</tr>
-		</table>
+			<h1>Connexion</h1>
+			<br>
+			<div class="connection">
+				<span class="label-login">Pseudo :</span>
+				<input class='form-control' type='text' name='nickname' required/>
+				<span class="label-login">Mot de passe :</span>
+				<input class='form-control' type='password' name='password'/>
+				<input class='btn btn-success' type='submit' name='connect' value='Se connecter'/>
+			</div>
 		</form>
 	</div>
+</div>
 <?php
-	}
+}
 ?>

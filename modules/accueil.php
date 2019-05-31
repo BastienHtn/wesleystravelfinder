@@ -1,3 +1,6 @@
+<?php
+require_once('manage_session.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +13,9 @@
     <script src="../js/jquery.js"></script>
 </head>
 <body>
-<?php include('navbar.php'); 
+<?php
+    include('navbar.php');
+    require_once('manage_messages.php');
     if (isset($_GET['page'])) {
         switch ($_GET['page']) {
             case 'connexion':
