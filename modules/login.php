@@ -34,9 +34,9 @@ else	// Si la session n'est pas admin, on affiche le formulaire de connexion
 			<h1>Connexion</h1>
 			<br>
 			<div class="connection">
-				<span class="label-login">Pseudo :</span>
+				<span class="label-login">Pseudo</span>
 				<input class='form-control' type='text' name='nickname' required/>
-				<span class="label-login">Mot de passe :</span>
+				<span class="label-login">Mot de passe</span>
 				<input class='form-control' type='password' name='password'/>
 				<input class='btn btn-success' type='submit' name='connect' value='Se connecter'/>
 			</div>
