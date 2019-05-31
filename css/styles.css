@@ -199,3 +199,33 @@ section.active {
     top: 50%;
     justify-items: center;
 }
+
+.etape1-choix{
+    display: inline-block;
+    margin: 5%;
+    width: 20%;
+    height: 20%;
+    border-radius: 5%;
+}
+
+.etape1-choix:hover{
+    background-color: darkgray;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.etape1-choix-clicked{
+    display: inline-block;
+    margin: 5%;
+    width: 20%;
+    height: 20%;
+    border-radius: 5%;
+    background-color: darkgray;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.etape1-label{
+    color: white;
+    font-size: xx-large;
+}
