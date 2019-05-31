@@ -12,7 +12,7 @@
 
     <div class="resa-etape" id="resa-etape">
         <section id="etape1">
-            <h1 class="resa-titre">Etape 1</h1>
+            <h1 class="resa-titre">Vous voyagez ...</h1>
             <div class="resa-etape-contenu">
                 <div id="etape1-choix-group" class="etape1-choix" onclick="etape1_choose('etape1-choix-group')">
                     <img src="../img/en_groupe-100.png"/>
@@ -27,19 +27,19 @@
             </div>
         </section>
         <section id="etape2">
-            <h1 class="resa-titre">Etape 2</h1>
+            <h1 class="resa-titre">Vos centres d'intérêts ...</h1>
             <div class="resa-etape-contenu">
                 <span>Etape 2</span>
             </div>
         </section>
         <section id="etape3">
-            <h1 class="resa-titre">Etape 3</h1>
+            <h1 class="resa-titre">Voyage en groupe ...</h1>
             <div class="resa-etape-contenu">
                 <span>Etape 3</span>
             </div>
         </section>
         <section id="etape4">
-            <h1 class="resa-titre">Etape 4</h1>
+            <h1 class="resa-titre">Votre offre de voyage ...</h1>
             <div class="resa-etape-contenu">
                 <span>Etape 4</span>
             </div>

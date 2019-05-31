@@ -3,9 +3,13 @@ $("#resa-etape").ready(function () {
 
     $("#fgauche").click(function () {
         if ($("#etape2").hasClass("active")) {
+            // On cache l'étape active 
             $("#etape2").removeClass("active");
+            // On affiche l'étape d'avant
             $("#etape1").addClass("active");
+            // Si on passe à l'étape 1 on cache la flèche de gauche
             $("#fgauche").css("display", "none");
+            // On modifie la progress bar en fonction de l'étape
             $("#pbar").css("width", "25%");
         } else {
             if ($("#etape3").hasClass("active")) {
@@ -25,9 +29,13 @@ $("#resa-etape").ready(function () {
 
     $("#fdroite").click(function () {
         if ($("#etape1").hasClass("active")) {
+            // On cache l'étape active
             $("#etape1").removeClass("active");
+            // On affiche l'étape suivante 
             $("#etape2").addClass("active");
+            // On affiche la flèche de gauche si on passe à l'étape 2 pour pouvoir revenir en arrière
             $("#fgauche").css("display", "block");
+            // On modifie la progress bar en fonction de l'étape
             $("#pbar").css("width", "50%");
         } else {
             if ($("#etape2").hasClass("active")) {
