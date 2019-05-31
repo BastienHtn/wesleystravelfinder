@@ -291,4 +291,28 @@ section.active {
     font-size: xx-large;
 }
 
-.resa-etape-contenu {}
+.etape1-block {
+    margin-top: 70px;
+}
+
+.etape2-block {
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    border-radius: 5px;
+    filter: drop-shadow(3px 3px 3px black);
+    margin-top: 135px;
+}
+
+.etape2-block-interet {
+    display: inline-block;
+}
+
+.etape2-block-interet span {
+    color: black;
+}
+
+.etape2-block-interet img {
+    margin: 0px 34px;
+}

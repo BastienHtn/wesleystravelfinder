@@ -14,22 +14,46 @@
         <section id="etape1">
             <h1 class="resa-titre">Vous voyagez ...</h1>
             <div class="resa-etape-contenu">
-                <div id="etape1-choix-group" class="etape1-choix" onclick="etape1_choose('etape1-choix-group')">
-                    <img src="../img/en_groupe-100.png"/>
-                    <br>
-                    <span class="etape1-label">En groupe</span>
-                </div>
-                <div id="etape1-choix-solo" class="etape1-choix" onclick="etape1_choose('etape1-choix-solo')">
-                    <img src="../img/seul-100.png"/>
-                    <br>
-                    <span class="etape1-label">Seul</span>
+                <div class="etape1-block">
+                    <div id="etape1-choix-group" class="etape1-choix" onclick="etape1_choose('etape1-choix-group')">
+                        <img src="../img/en_groupe-100.png"/>
+                        <br>
+                        <span class="etape1-label">En groupe</span>
+                    </div>
+                    <div id="etape1-choix-solo" class="etape1-choix" onclick="etape1_choose('etape1-choix-solo')">
+                        <img src="../img/seul-100.png"/>
+                        <br>
+                        <span class="etape1-label">Seul</span>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="etape2">
             <h1 class="resa-titre">Vos centres d'intérêts ...</h1>
             <div class="resa-etape-contenu">
-                <span>Etape 2</span>
+                <div class="etape2-block">
+                    <h2>Sélectionnez vos centres d'intérêts</h2>
+                    <div class="etape2-block-interet">
+                        <img src="https://img.icons8.com/color/100/000000/food-and-wine.png">
+                        <br>
+                        <span>Gastronomie</span>
+                    </div>
+                    <div class="etape2-block-interet">
+                        <img src="https://img.icons8.com/color/100/000000/alps.png">
+                        <br>
+                        <span>Paysage</span>
+                    </div>
+                    <div class="etape2-block-interet">
+                        <img src="https://img.icons8.com/color/100/000000/museum.png">
+                        <br>
+                        <span>Culture</span>
+                    </div>
+                    <div class="etape2-block-interet">
+                        <img src="https://img.icons8.com/color/100/000000/football2.png">
+                        <br>
+                        <span>Sport</span>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="etape3">
