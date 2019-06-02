@@ -10,20 +10,23 @@ $("#resa-etape").ready(function () {
             // Si on passe à l'étape 1 on cache la flèche de gauche
             $("#fgauche").css("display", "none");
             // On modifie la progress bar en fonction de l'étape
-            $("#pbar").css("width", "25%");
+            $("#pbar").css("width", "50%");
         } else {
             if ($("#etape3").hasClass("active")) {
                 $("#etape3").removeClass("active");
                 $("#etape2").addClass("active");
-                $("#pbar").css("width", "50%");
-            } else {
-                if ($("#etape4").hasClass("active")) {
-                    $("#etape4").removeClass("active");
-                    $("#etape3").addClass("active");
-                    $("#fdroite").css("display", "block");
-                    $("#pbar").css("width", "75%");
-                }
+                $("#progress").css("visibility", "visible");
+                $("#pbar").css("width", "100%");
+                $("#fdroite").css("display", "block");
             }
+            // } else {
+            //     if ($("#etape4").hasClass("active")) {
+            //         $("#etape4").removeClass("active");
+            //         $("#etape3").addClass("active");
+            //         $("#fdroite").css("display", "block");
+            //         $("#pbar").css("width", "75%");
+            //     }
+            // }
         }
     });
 
@@ -36,20 +39,22 @@ $("#resa-etape").ready(function () {
             // On affiche la flèche de gauche si on passe à l'étape 2 pour pouvoir revenir en arrière
             $("#fgauche").css("display", "block");
             // On modifie la progress bar en fonction de l'étape
-            $("#pbar").css("width", "50%");
+            $("#pbar").css("width", "100%");
         } else {
             if ($("#etape2").hasClass("active")) {
                 $("#etape2").removeClass("active");
                 $("#etape3").addClass("active");
-                $("#pbar").css("width", "75%");
-            } else {
-                if ($("#etape3").hasClass("active")) {
-                    $("#etape3").removeClass("active");
-                    $("#etape4").addClass("active");
-                    $("#fdroite").css("display", "none");
-                    $("#pbar").css("width", "100%");
-                }
+                $("#progress").css("visibility", "hidden");
+                $("#fdroite").css("display", "none");
             }
+            // } else {
+            //     if ($("#etape3").hasClass("active")) {
+            //         $("#etape3").removeClass("active");
+            //         $("#etape4").addClass("active");
+            //         $("#fdroite").css("display", "none");
+            //         $("#pbar").css("width", "100%");
+            //     }
+            // }
         }
     });
 });
