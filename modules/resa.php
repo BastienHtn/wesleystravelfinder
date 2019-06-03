@@ -80,45 +80,47 @@
                                 <input type="text" value="<?php echo $_SESSION['nickname']; ?>" disabled>
                                 <span>Critères</span>
                             </div>
-                            <div class="etape2-block-interet">
-                            <div style="position: relative;" id="interet-food" onclick="etape2_choose('interet-food')">
-                                <img src="https://img.icons8.com/color/100/000000/food-and-wine.png">
-                                <img id="interet-food-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
-                                <img id="interet-food-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
-                            </div>
-                            <br>
-                            <span>Gastronomie</span>
-                            </div>
-                            <div class="etape2-block-interet">
-                                <div style="position: relative;" id="interet-landscape" onclick="etape2_choose('interet-landscape')">
-                                    <img src="https://img.icons8.com/color/100/000000/alps.png">
-                                    <img id="interet-landscape-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
-                                    <img id="interet-landscape-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
+                            <div id="critere" style="display: inline-flex;">
+                                <div class="etape2-block-interet">
+                                <div style="position: relative;" id="interet-food" onclick="etape2_choose('interet-food')">
+                                    <img src="https://img.icons8.com/color/100/000000/food-and-wine.png">
+                                    <img id="interet-food-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                                    <img id="interet-food-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
                                 </div>
                                 <br>
-                                <span>Paysage</span>
-                            </div>
-                            <div class="etape2-block-interet">
-                                <div style="position: relative;" id="interet-culture" onclick="etape2_choose('interet-culture')">
-                                    <img src="https://img.icons8.com/color/100/000000/museum.png">
-                                    <img id="interet-culture-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
-                                    <img id="interet-culture-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
+                                <span>Gastronomie</span>
                                 </div>
-                                <br>
-                                <span>Culture</span>
-                            </div>
-                            <div class="etape2-block-interet">
-                                <div style="position: relative;" id="interet-sport" onclick="etape2_choose('interet-sport')">
-                                    <img src="https://img.icons8.com/color/100/000000/football2.png">
-                                    <img id="interet-sport-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
-                                    <img id="interet-sport-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
+                                <div class="etape2-block-interet">
+                                    <div style="position: relative;" id="interet-landscape" onclick="etape2_choose('interet-landscape')">
+                                        <img src="https://img.icons8.com/color/100/000000/alps.png">
+                                        <img id="interet-landscape-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                                        <img id="interet-landscape-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
+                                    </div>
+                                    <br>
+                                    <span>Paysage</span>
                                 </div>
-                                <br>
-                                <span>Sport</span>
+                                <div class="etape2-block-interet">
+                                    <div style="position: relative;" id="interet-culture" onclick="etape2_choose('interet-culture')">
+                                        <img src="https://img.icons8.com/color/100/000000/museum.png">
+                                        <img id="interet-culture-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                                        <img id="interet-culture-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
+                                    </div>
+                                    <br>
+                                    <span>Culture</span>
+                                </div>
+                                <div class="etape2-block-interet">
+                                    <div style="position: relative;" id="interet-sport" onclick="etape2_choose('interet-sport')">
+                                        <img src="https://img.icons8.com/color/100/000000/football2.png">
+                                        <img id="interet-sport-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
+                                        <img id="interet-sport-v" class="icon-validate desactive" src="https://img.icons8.com/cotton/64/000000/checkmark.png">
+                                    </div>
+                                    <br>
+                                    <span>Sport</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="etape2-groupe-ajout">
-                            <img src="https://img.icons8.com/android/24/000000/plus.png">
+                        <div class="etape2-groupe-ajout" id="add">
+                            <img src="https://img.icons8.com/android/24/000000/plus.png" onclick="etape2_add()">
                         </div>
                     </div>
 
@@ -168,6 +170,7 @@
 var isSolo = false;
 var isGroup = false;
 var tabInteret = [false, false, false, false];
+var nbMembre = 1;
     function etape1_choose(id)
     {
         if(id == 'etape1-choix-group')
@@ -190,6 +193,23 @@ var tabInteret = [false, false, false, false];
             $("#etape2-seul").css("display", "block");
             $("#etape2-groupe").css("display", "none");
         }
+    }
+
+    function etape2_add() {
+        nbMembre++;
+        var idDiv = "newBlock" + nbMembre;
+        var idDivNom = "newBlockNom" + nbMembre;
+        $("<div/>", {
+            "id": idDiv,
+            "class": "etape2-block-groupe"
+        }).insertBefore("#add");
+        $("<div/>", {
+            "id": idDivNom,
+            "class": "etape2-groupe-nom"
+        }).appendTo("#" + idDiv);
+        $("<input/>").appendTo("#" + idDivNom);
+        $("<span>Critères</span>").appendTo("#" + idDivNom);
+        $("#critere").clone().appendTo("#" + idDiv);
     }
 
     function etape2_choose(id) {

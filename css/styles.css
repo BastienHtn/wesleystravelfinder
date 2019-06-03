@@ -347,6 +347,7 @@ section.active {
     position: relative;
     text-align: right;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
 .etape2-block-groupe img {
