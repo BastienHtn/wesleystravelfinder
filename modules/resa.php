@@ -193,58 +193,66 @@ var tabInteret = [false, false, false, false];
     }
 
     function etape2_choose(id) {
-        switch (id) {
-            case 'interet-food':
-                if (tabInteret[0] == false) {
-                    tabInteret[0] = true;
-                    $("#interet-food-x").attr("class", "icon-validate desactive");
-                    $("#interet-food-v").attr("class", "icon-validate active");
-                } else {
-                    tabInteret[0] = false;
-                    $("#interet-food-x").attr("class", "icon-validate active");
-                    $("#interet-food-v").attr("class", "icon-validate desactive");
-                }
-                break;
-
-            case 'interet-landscape':
-                if (tabInteret[1] == false) {
-                    tabInteret[1] = true;
-                    $("#interet-landscape-x").attr("class", "icon-validate desactive");
-                    $("#interet-landscape-v").attr("class", "icon-validate active");
-                } else {
-                    tabInteret[1] = false;
-                    $("#interet-landscape-x").attr("class", "icon-validate active");
-                    $("#interet-landscape-v").attr("class", "icon-validate desactive");
-                }
-                break;
-
-            case 'interet-culture':
-                if (tabInteret[2] == false) {
-                    tabInteret[2] = true;
-                    $("#interet-culture-x").attr("class", "icon-validate desactive");
-                    $("#interet-culture-v").attr("class", "icon-validate active");
-                } else {
-                    tabInteret[2] = false;
-                    $("#interet-culture-x").attr("class", "icon-validate active");
-                    $("#interet-culture-v").attr("class", "icon-validate desactive");
-                }
-                break;
-
-            case 'interet-sport':
-                if (tabInteret[3] == false) {
-                    tabInteret[3] = true;
-                    $("#interet-sport-x").attr("class", "icon-validate desactive");
-                    $("#interet-sport-v").attr("class", "icon-validate active");
-                } else {
-                    tabInteret[3] = false;
-                    $("#interet-sport-x").attr("class", "icon-validate active");
-                    $("#interet-sport-v").attr("class", "icon-validate desactive");
-                }
-                break;
-        
-            default:
-                break;
+        if (event.srcElement.src == "https://img.icons8.com/cotton/64/000000/cancel.png") {
+            event.srcElement.src = "https://img.icons8.com/cotton/64/000000/checkmark.png";
+        } else {
+            if (event.srcElement.src == "https://img.icons8.com/cotton/64/000000/checkmark.png") {
+                event.srcElement.src = "https://img.icons8.com/cotton/64/000000/cancel.png";
+            }
         }
+
+        // switch (id) {
+        //     case 'interet-food':
+        //         if (tabInteret[0] == false) {
+        //             tabInteret[0] = true;
+        //             // $("#interet-food-x").attr("class", "icon-validate desactive");
+        //             // $("#interet-food-v").attr("class", "icon-validate active");
+        //         } else {
+        //             tabInteret[0] = false;
+        //             // $("#interet-food-x").attr("class", "icon-validate active");
+        //             // $("#interet-food-v").attr("class", "icon-validate desactive");
+        //         }
+        //         break;
+
+        //     case 'interet-landscape':
+        //         if (tabInteret[1] == false) {
+        //             tabInteret[1] = true;
+        //             // $("#interet-landscape-x").attr("class", "icon-validate desactive");
+        //             // $("#interet-landscape-v").attr("class", "icon-validate active");
+        //         } else {
+        //             tabInteret[1] = false;
+        //             // $("#interet-landscape-x").attr("class", "icon-validate active");
+        //             // $("#interet-landscape-v").attr("class", "icon-validate desactive");
+        //         }
+        //         break;
+
+        //     case 'interet-culture':
+        //         if (tabInteret[2] == false) {
+        //             tabInteret[2] = true;
+        //             // $("#interet-culture-x").attr("class", "icon-validate desactive");
+        //             // $("#interet-culture-v").attr("class", "icon-validate active");
+        //         } else {
+        //             tabInteret[2] = false;
+        //             // $("#interet-culture-x").attr("class", "icon-validate active");
+        //             // $("#interet-culture-v").attr("class", "icon-validate desactive");
+        //         }
+        //         break;
+
+        //     case 'interet-sport':
+        //         if (tabInteret[3] == false) {
+        //             tabInteret[3] = true;
+        //             // $("#interet-sport-x").attr("class", "icon-validate desactive");
+        //             // $("#interet-sport-v").attr("class", "icon-validate active");
+        //         } else {
+        //             tabInteret[3] = false;
+        //             // $("#interet-sport-x").attr("class", "icon-validate active");
+        //             // $("#interet-sport-v").attr("class", "icon-validate desactive");
+        //         }
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
     }
 </script>
 </html>
