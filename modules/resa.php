@@ -209,7 +209,9 @@ var nbMembre = 1;
         }).appendTo("#" + idDiv);
         $("<input/>").appendTo("#" + idDivNom);
         $("<span>Critères</span>").appendTo("#" + idDivNom);
-        $("#critere").clone().appendTo("#" + idDiv);
+        var clone = $("#critere").clone();
+        clone.find(".icon-validate").attr("src", "https://img.icons8.com/cotton/64/000000/cancel.png");
+        clone.appendTo("#" + idDiv);
     }
 
     function etape2_choose(id) {
