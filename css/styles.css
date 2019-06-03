@@ -7,6 +7,7 @@ body {
     background-image: url("../img/chureiTower.jpg");
     background-size: cover;
     height: 100%;
+    color: white;
 }
 
 .progress {
@@ -25,13 +26,11 @@ body {
 
 .resa-titre {
     text-align: center;
-    color: white;
     letter-spacing: 2px;
 }
 
 .icon-fleche {
     position: absolute;
-    color: white;
     filter: brightness(0) invert(1);
     vertical-align: middle;
     top: 50%;
@@ -70,10 +69,11 @@ body {
 }
 
 .navbar-block a {
-    letter-spacing: 1px;
     color: white;
+    letter-spacing: 1px;
     line-height: 45px;
     font-size: large;
+    text-decoration: none;
 }
 
 .navbar-block-logo {
@@ -99,6 +99,20 @@ body {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+#formLogin{
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 
@@ -138,15 +152,8 @@ body {
     text-align: center;
 }
 
-.form-login h1 {
-    color: white;
-    text-shadow: 1px 1px black;
-}
-
 .label-login {
     font-size: xx-large;
-    color: white;
-    text-shadow: 1px 1px black;
 }
 
 .compte {
@@ -162,12 +169,10 @@ body {
     margin: 5%;
     padding: 1%;
     background-color: green;
-    color: white;
 }
 
 .closebtn {
     margin-left: 15px;
-    color: white;
     font-weight: bold;
     float: right;
     font-size: 22px;
@@ -193,7 +198,7 @@ body {
 
 #logoIntro {
     animation-name: intro;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
 }
 
 @keyframes intro {
@@ -210,7 +215,6 @@ body {
 
 #infos {
     text-align: center;
-    color: white;
     font-size: 2vw;
     animation-name: introText;
     animation-duration: 4s;
@@ -258,11 +262,6 @@ body {
     display: inline-block;
 }
 
-
-section span {
-    color: white;
-}
-
 section {
     display: none;
 }
@@ -292,15 +291,13 @@ section.active {
 }
 
 .etape1-choix:hover {
-    background-color: rgba(118, 0, 173, 0.7);
-    filter: drop-shadow(3px 3px 3px black);
+    filter: drop-shadow(0px 0px 1rem rgba(118, 0, 173, 0.7));
     cursor: pointer;
 }
 
 .etape1-choix-clicked {
     display: inline-block;
     background-color: rgba(118, 0, 173, 1);
-    filter: drop-shadow(3px 3px 3px black);
     margin: 0px 100px;
     width: 200px;
     cursor: pointer;
@@ -310,20 +307,15 @@ section.active {
 .etape1-choix-clicked img {
     max-width: 100%;
     max-height: 100%;
-    filter: drop-shadow(1px 1px 1px black);
 }
 
 .etape1-label {
-    color: white;
     font-size: calc(1vw + 1vh + 1vmin);
-    text-shadow: 2px 2px black;
     white-space: nowrap;
 }
 
 .etape1-label-large {
-    color: white;
     font-size: 300%;
-    text-shadow: 2px 2px black;
     margin: 5%;
 }
 
@@ -333,9 +325,6 @@ section.active {
     margin: auto;
     width: 75%;
     border-radius: 5px;
-    filter: drop-shadow(3px 3px 3px black);
-    margin-top: 135px;
-    padding: 15px;
 }
 
 .etape2-block-groupe {
@@ -343,7 +332,6 @@ section.active {
     background-color: #454d54;
     border-radius: 5px;
     margin: auto;
-    filter: drop-shadow(3px 3px 3px black);
     position: relative;
     text-align: right;
     padding: 5px;
@@ -352,12 +340,6 @@ section.active {
 
 .etape2-block-groupe img {
     width: 50px;
-}
-
-.etape2-groupe-nom {
-    position: absolute;
-    left: 0;
-    top: 40px;
 }
 
 .etape2-block-groupe input {
@@ -371,17 +353,9 @@ section.active {
     margin-right: 30px;
 }
 
-.etape2-block h2 {
-    color: white;
-}
-
 .etape2-block-interet {
     display: inline-block;
     text-align: center !important;
-}
-
-.etape2-block-interet span {
-    color: white;
 }
 
 .etape2-block-interet img {
@@ -425,7 +399,6 @@ section.active {
     width: 75%;
     border-radius: 5px;
     margin: auto;
-    filter: drop-shadow(3px 3px 3px black);
     background-color: #343a40;
     padding: 15px;
 }
@@ -438,7 +411,6 @@ section.active {
     border-radius: 5px;
     display: flex;
     text-align: left;
-    filter: drop-shadow(3px 3px 3px black);
     position: relative;
     margin-bottom: 15px !important;
 }
@@ -450,7 +422,6 @@ section.active {
 }
 
 .etape3-offre-texte {
-    color: white !important;
     letter-spacing: 1px;
     margin: 5px 8px;
 }

@@ -12,24 +12,24 @@
 
     <div class="resa-etape" id="resa-etape">
         <section id="etape1">
-            <h1 class="resa-titre">Vous voyagez</h1>
+            <h1 class="resa-titre display-4">Vous voyagez</h1>
             <div class="resa-etape-contenu">
                 <div class="etape1-block">
                     <div id="etape1-choix-group" class="etape1-choix" onclick="etape1_choose('etape1-choix-group')">
                         <img src="../img/en_groupe-100.png"/>
                         <br>
-                        <span class="etape1-label">En groupe</span>
+                        <span class="etape1-label display-4">En groupe</span>
                     </div>
-                    <div id="etape1-choix-solo" class="etape1-choix" onclick="etape1_choose('etape1-choix-solo')">
+                    <div id="etape1-choix-solo" class="etape1-choix display-4" onclick="etape1_choose('etape1-choix-solo')">
                         <img src="../img/seul-100.png"/>
                         <br>
-                        <span class="etape1-label">Seul</span>
+                        <span class="etape1-label display-4">Seul</span>
                     </div>
                 </div>
             </div>
         </section>
         <section id="etape2">
-            <h1 class="resa-titre">Vos centres d'intérêts</h1>
+            <h1 class="resa-titre display-4">Vos centres d'intérêts</h1>
             <div class="resa-etape-contenu">
                 <div class="etape2-block">
                     <div id="etape2-seul">
@@ -75,7 +75,7 @@
 
 
                     <div id="etape2-groupe">
-                        <div class="etape2-block-groupe">
+                        <div class="etape2-block-groupe mt-1">
                             <div class="etape2-groupe-nom">
                                 <input type="text" value="<?php echo $_SESSION['nickname']; ?>" disabled>
                                 <span>Critères</span>
