@@ -1,3 +1,9 @@
+<?php
+    if (!isset($_SESSION['nickname'])) {
+        header('Location: accueil.php?page=connexion');
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +13,7 @@
     <img class="icon-fleche" id="fgauche" src="https://img.icons8.com/material-outlined/100/000000/back.png">
     <img class="icon-fleche" id="fdroite" src="https://img.icons8.com/material-outlined/100/000000/forward.png">
     <div class="progress rounded-pill" id="progress">
-        <div id="pbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <div id="pbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 
     <div class="resa-etape" id="resa-etape">

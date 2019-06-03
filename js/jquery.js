@@ -10,13 +10,13 @@ $("#resa-etape").ready(function () {
             // Si on passe à l'étape 1 on cache la flèche de gauche
             $("#fgauche").css("display", "none");
             // On modifie la progress bar en fonction de l'étape
-            $("#pbar").css("width", "50%");
+            $("#pbar").css("width", "0%");
         } else {
             if ($("#etape3").hasClass("active")) {
                 $("#etape3").removeClass("active");
                 $("#etape2").addClass("active");
                 $("#progress").css("visibility", "visible");
-                $("#pbar").css("width", "100%");
+                $("#pbar").css("width", "50%");
                 $("#fdroite").css("display", "block");
             }
             // } else {
@@ -39,7 +39,7 @@ $("#resa-etape").ready(function () {
             // On affiche la flèche de gauche si on passe à l'étape 2 pour pouvoir revenir en arrière
             $("#fgauche").css("display", "block");
             // On modifie la progress bar en fonction de l'étape
-            $("#pbar").css("width", "100%");
+            $("#pbar").css("width", "50%");
         } else {
             if ($("#etape2").hasClass("active")) {
                 $("#etape2").removeClass("active");
