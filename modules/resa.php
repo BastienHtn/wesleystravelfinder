@@ -10,13 +10,11 @@
 	<title></title>
 </head>
 <body>
-    <img class="icon-fleche" id="fgauche" src="https://img.icons8.com/material-outlined/100/000000/back.png">
-    <img class="icon-fleche" id="fdroite" src="https://img.icons8.com/material-outlined/100/000000/forward.png">
-    <div class="progress rounded-pill" id="progress">
-        <div id="pbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
+    <img class="icon-fleche" id="fgauche" src="../img/icons8-chevron-gauche-filled-50.png">
+    <img class="icon-fleche" id="fdroite" src="../img/icons8-chevron-droit-filled-50.png">
 
     <div class="resa-etape" id="resa-etape">
+
         <section id="etape1">
             <h1 class="resa-titre display-4">Vous voyagez</h1>
             <div class="resa-etape-contenu">
@@ -26,7 +24,7 @@
                         <br>
                         <span class="etape1-label display-4">En groupe</span>
                     </div>
-                    <div id="etape1-choix-solo" class="etape1-choix display-4" onclick="etape1_choose('etape1-choix-solo')">
+                    <div id="etape1-choix-solo" class="etape1-choix" onclick="etape1_choose('etape1-choix-solo')">
                         <img src="../img/seul-100.png"/>
                         <br>
                         <span class="etape1-label display-4">Seul</span>
@@ -34,6 +32,7 @@
                 </div>
             </div>
         </section>
+
         <section id="etape2">
             <h1 class="resa-titre display-4">Vos centres d'intérêts</h1>
             <div class="resa-etape-contenu">
@@ -80,11 +79,13 @@
 
 
 
-                    <div id="etape2-groupe">
-                        <div class="etape2-block-groupe mt-1">
+                    <div id="etape2-groupe" class="p-3 shadow-lg">
+                        <div class="etape2-block-groupe mt-1 shadow-lg text-center">
+                            <div>
+                                <span class="display-4">Critères</span>
+                            </div>
                             <div class="etape2-groupe-nom">
                                 <input type="text" value="<?php echo $_SESSION['nickname']; ?>" disabled>
-                                <span>Critères</span>
                             </div>
                             <div id="critere" style="display: inline-flex;">
                                 <div class="etape2-block-interet">
@@ -139,37 +140,41 @@
             </div>
         </section>
         <section id="etape3">
-            <h1 class="resa-titre" id="etape3-titre">Voyage</h1>
+            <h1 class="resa-titre display-4" id="etape3-titre">Voyage</h1>
 
             <div class="resa-etape-contenu" id="etape3-seul">
                     
-                <div class="etape3-offre-seul">
-                    <div class="etape3-offre-voyage">
-                        <img src="../img/japonDest.jpg">
+                <div class="etape3-offre-seul shadow-lg">
+                    <div class="etape3-offre-voyage shadow-lg">
+                        <img src="../img/japonDest.jpg" class="rounded-left">
                         <div class="etape3-offre-texte">
-                            <h2>Japon</h2>
-                            <span>Description du Japon ...</span>
+                            <h2 class="display-4">Japon</h2>
+                            <span class="lead">Description du Japon ...</span>
                         </div>
                         <div class="etape3-offre-prix">
-                            <span>Prix moyen d'un voyage (2 semaines)</span>
-                            <h2>3200 €</h2>
+                            <span class="lead">Prix moyen d'un voyage (2 semaines)</span>
+                            <h2 class="lead">3200 €</h2>
                         </div>
 
                     </div>
-                    <div class="etape3-offre-voyage">
-                        <img src="../img/italieDest.jpg">
+                    <div class="etape3-offre-voyage shadow-lg">
+                        <img src="../img/italieDest.jpg" class="rounded-left">
                         <div class="etape3-offre-texte">
-                            <h2>Italie</h2>
-                            <span>Description de l'Italie ...</span>
+                            <h2 class="display-4">Italie</h2>
+                            <span class="lead">Description de l'Italie ...</span>
                         </div>
                         <div class="etape3-offre-prix">
-                            <span>Prix moyen d'un voyage (2 semaines)</span>
-                            <h2>3000 €</h2>
+                            <span class="lead">Prix moyen d'un voyage (2 semaines)</span>
+                            <h2 class="lead">3000 €</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="progress rounded-pill" id="progress">
+            <div id="pbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
     </div>
 </body>
 <script type="text/javascript">
@@ -228,59 +233,6 @@ var nbMembre = 1;
                 event.srcElement.src = "https://img.icons8.com/cotton/64/000000/cancel.png";
             }
         }
-
-        // switch (id) {
-        //     case 'interet-food':
-        //         if (tabInteret[0] == false) {
-        //             tabInteret[0] = true;
-        //             // $("#interet-food-x").attr("class", "icon-validate desactive");
-        //             // $("#interet-food-v").attr("class", "icon-validate active");
-        //         } else {
-        //             tabInteret[0] = false;
-        //             // $("#interet-food-x").attr("class", "icon-validate active");
-        //             // $("#interet-food-v").attr("class", "icon-validate desactive");
-        //         }
-        //         break;
-
-        //     case 'interet-landscape':
-        //         if (tabInteret[1] == false) {
-        //             tabInteret[1] = true;
-        //             // $("#interet-landscape-x").attr("class", "icon-validate desactive");
-        //             // $("#interet-landscape-v").attr("class", "icon-validate active");
-        //         } else {
-        //             tabInteret[1] = false;
-        //             // $("#interet-landscape-x").attr("class", "icon-validate active");
-        //             // $("#interet-landscape-v").attr("class", "icon-validate desactive");
-        //         }
-        //         break;
-
-        //     case 'interet-culture':
-        //         if (tabInteret[2] == false) {
-        //             tabInteret[2] = true;
-        //             // $("#interet-culture-x").attr("class", "icon-validate desactive");
-        //             // $("#interet-culture-v").attr("class", "icon-validate active");
-        //         } else {
-        //             tabInteret[2] = false;
-        //             // $("#interet-culture-x").attr("class", "icon-validate active");
-        //             // $("#interet-culture-v").attr("class", "icon-validate desactive");
-        //         }
-        //         break;
-
-        //     case 'interet-sport':
-        //         if (tabInteret[3] == false) {
-        //             tabInteret[3] = true;
-        //             // $("#interet-sport-x").attr("class", "icon-validate desactive");
-        //             // $("#interet-sport-v").attr("class", "icon-validate active");
-        //         } else {
-        //             tabInteret[3] = false;
-        //             // $("#interet-sport-x").attr("class", "icon-validate active");
-        //             // $("#interet-sport-v").attr("class", "icon-validate desactive");
-        //         }
-        //         break;
-        
-        //     default:
-        //         break;
-        // }
     }
 </script>
 </html>
