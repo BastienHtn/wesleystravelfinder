@@ -13,7 +13,7 @@
     <img class="icon-fleche" id="fgauche" src="../img/icons8-chevron-gauche-filled-50.png">
     <img class="icon-fleche" id="fdroite" src="../img/icons8-chevron-droit-filled-50.png">
 
-    <div class="resa-etape" id="resa-etape">
+    <div class="resa-etape" id="resa-etape" style="flex-grow: 1;">
 
         <section id="etape1">
             <h1 class="resa-titre display-4">Vous voyagez</h1>
@@ -79,16 +79,13 @@
 
 
 
-                    <div id="etape2-groupe" class="p-3 shadow-lg">
+                    <div id="etape2-groupe" class="p-3 shadow-lg mb-5">
                         <div class="etape2-block-groupe mt-1 shadow-lg text-center">
-                            <div>
-                                <span class="display-4">Critères</span>
-                            </div>
-                            <div class="etape2-groupe-nom">
-                                <input type="text" value="<?php echo $_SESSION['nickname']; ?>" disabled>
-                            </div>
-                            <div id="critere" style="display: inline-flex;">
-                                <div class="etape2-block-interet">
+                        <div class="etape2-groupe-nom">
+                            <input type="text" value="<?php echo $_SESSION['nickname']; ?>" disabled>
+                        </div>
+                        <div id="critere" style="margin-left:auto;">
+                            <div class="etape2-block-interet">
                                 <div style="position: relative;" id="interet-food" onclick="etape2_choose('interet-food')">
                                     <img src="https://img.icons8.com/color/100/000000/food-and-wine.png">
                                     <img id="interet-food-x" class="icon-validate" src="https://img.icons8.com/cotton/64/000000/cancel.png">
@@ -171,17 +168,19 @@
                 </div>
             </div>
         </section>
-
-        <div class="progress rounded-pill" id="progress">
-            <div id="pbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
+    </div>
+    <div class="progress rounded-pill mb-5" id="progress">
+        <div id="pbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%; height: 7vh;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 </body>
+
+
 <script type="text/javascript">
 var isSolo = false;
 var isGroup = false;
 var tabInteret = [false, false, false, false];
 var nbMembre = 1;
+
     function etape1_choose(id)
     {
         if(id == 'etape1-choix-group')
@@ -193,6 +192,9 @@ var nbMembre = 1;
             $("#etape3-titre").html("Voyage en groupe");
             $("#etape2-seul").css("display", "none");
             $("#etape2-groupe").css("display", "block");
+            if ($("#fdroite").css("display", "none")) {
+                $("#fdroite").css("display", "block");
+            }
         }
         else if(id == 'etape1-choix-solo')
         {
@@ -203,6 +205,9 @@ var nbMembre = 1;
             $("#etape3-titre").html("Voyage seul");
             $("#etape2-seul").css("display", "block");
             $("#etape2-groupe").css("display", "none");
+            if ($("#fdroite").css("display", "none")) {
+                $("#fdroite").css("display", "block");
+            }
         }
     }
 
@@ -212,14 +217,15 @@ var nbMembre = 1;
         var idDivNom = "newBlockNom" + nbMembre;
         $("<div/>", {
             "id": idDiv,
-            "class": "etape2-block-groupe"
+            "class": "etape2-block-groupe mt-1 shadow-lg text-center"
         }).insertBefore("#add");
         $("<div/>", {
             "id": idDivNom,
-            "class": "etape2-groupe-nom"
+            "class": "etape2-groupe-nom",
         }).appendTo("#" + idDiv);
-        $("<input/>").appendTo("#" + idDivNom);
-        $("<span>Critères</span>").appendTo("#" + idDivNom);
+        $("<input/>", {
+            "placeholder": "Saisir un nom",
+        }).appendTo("#" + idDivNom);
         var clone = $("#critere").clone();
         clone.find(".icon-validate").attr("src", "https://img.icons8.com/cotton/64/000000/cancel.png");
         clone.appendTo("#" + idDiv);

@@ -15,8 +15,9 @@ $("#resa-etape").ready(function () {
             if ($("#etape3").hasClass("active")) {
                 $("#etape3").removeClass("active");
                 $("#etape2").addClass("active");
-                $("#progress").css("visibility", "visible");
                 $("#pbar").css("width", "50%");
+                $("#pbar").css("background-color", "darkorchid");
+                $("#pbar").addClass("progress-bar-striped");
                 $("#fdroite").css("display", "block");
             }
             // } else {
@@ -44,7 +45,9 @@ $("#resa-etape").ready(function () {
             if ($("#etape2").hasClass("active")) {
                 $("#etape2").removeClass("active");
                 $("#etape3").addClass("active");
-                $("#progress").css("visibility", "hidden");
+                $("#pbar").css("background-color", "green");
+                $("#pbar").css("width", "100%");
+                $("#pbar").removeClass("progress-bar-striped");
                 $("#fdroite").css("display", "none");
             }
             // } else {

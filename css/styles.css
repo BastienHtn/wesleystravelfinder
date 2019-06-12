@@ -12,7 +12,6 @@ body {
 
 .progress {
     margin: auto;
-    margin-top: 5vw;
     width: 80%;
     height: 1rem;
     background-color: white;
@@ -35,6 +34,7 @@ body {
     top: 50%;
     margin: 0px 15px;
     filter: drop-shadow(2px 2px 7px #2b2b2b);
+    display: none;
 }
 
 .icon-fleche:hover {
@@ -48,7 +48,6 @@ body {
 
 .icon-fleche#fgauche {
     left: 0px;
-    display: none;
 }
 
 .navbar {
@@ -168,9 +167,12 @@ body {
 }
 
 .success_message {
-    margin: 5%;
+    text-align: center;
+    width: 30vw;
+    margin-right: auto;
+    margin-left: auto;
     padding: 1%;
-    background-color: green;
+    background-color: #28a745;
 }
 
 .closebtn {
@@ -290,10 +292,11 @@ section.active {
     display: inline-block;
     margin: 0px 100px;
     width: 200px;
+    padding: 5px;
 }
 
 .etape1-choix:hover {
-    filter: drop-shadow(0px 0px 1rem rgba(118, 0, 173, 0.7));
+    filter: drop-shadow(0px 0px 1rem darkorchid);
     cursor: pointer;
 }
 
@@ -302,7 +305,9 @@ section.active {
     background-color: rgba(118, 0, 173, 1);
     margin: 0px 100px;
     width: 200px;
+    padding: 5px;
     cursor: pointer;
+    filter: drop-shadow(0px 0px 5px black);
 }
 
 .etape1-choix img,
@@ -338,6 +343,8 @@ section.active {
     text-align: right;
     padding: 5px;
     margin-bottom: 10px;
+    display: inline-flex;
+    text-align: center;
 }
 
 .etape2-block-groupe img {
@@ -364,6 +371,10 @@ section.active {
     margin: 0px 34px;
 }
 
+.etape2-groupe-nom {
+    margin: auto;
+}
+
 .etape2-groupe-ajout {
     width: 80%;
     margin: auto;
@@ -387,6 +398,7 @@ section.active {
     top: 20px;
     right: 18px;
     opacity: 0.8;
+
 }
 
 .icon-validate.active {
@@ -430,11 +442,8 @@ section.active {
 
 .etape3-offre-prix {
     text-align: center;
-    position: absolute;
-    right: 0;
-    top: 35px;
     letter-spacing: 1px;
-    margin: 0px 15px;
+    margin: auto;
 }
 
 .etape3-offre-prix h2 {

@@ -13,25 +13,26 @@ require_once('manage_session.php');
     <script src="../js/jquery.js"></script>
 </head>
 <body>
-<?php
-    include('navbar.php');
-    require_once('manage_messages.php');
-    if (isset($_GET['page'])) {
-        switch ($_GET['page']) {
-            case 'connexion':
-                include('login.php');
-            break;
+<div style="display: flex; flex-direction: column; width: 100vw; min-height: 100vh;">
+    <?php
+        include('navbar.php');
+        require_once('manage_messages.php');
+        if (isset($_GET['page'])) {
+            switch ($_GET['page']) {
+                case 'connexion':
+                    include('login.php');
+                break;
 
-            case 'resa':
-                include('resa.php');
-            break;
-                
-            default:
-                # code...
-            break;
-        } 
-    }
-?>
-
+                case 'resa':
+                    include('resa.php');
+                break;
+                    
+                default:
+                    # code...
+                break;
+            } 
+        }
+    ?>        
+</div>
 </body>
 </html>
