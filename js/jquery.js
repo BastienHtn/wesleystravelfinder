@@ -45,7 +45,7 @@ $("#resa-etape").ready(function () {
             if ($("#etape2").hasClass("active")) {
                 $("#etape2").removeClass("active");
                 $("#etape3").addClass("active");
-                $("#pbar").css("background-color", "green");
+                $("#pbar").css("background-color", "#28a745");
                 $("#pbar").css("width", "100%");
                 $("#pbar").removeClass("progress-bar-striped");
                 $("#fdroite").css("display", "none");
